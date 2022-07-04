@@ -213,3 +213,29 @@ console.log(persona1.nombreCompleto());
 
 console.log(persona1.nombreCompleto.call(persona2)); //lamar el metodo de persona1 con los datos de persona2 
 
+
+///metodo call 
+ 
+let persona3 = {
+    nombre: 'Juan',
+    apellido: 'Perez',
+    nombreCompleto: function(){
+        return this.nombre + ' ' + this.apellido;
+    }
+}
+
+let persona4 = {
+    nombre: 'Carlos',
+    apellido: 'Lara'
+}
+
+//Uso de call para usar 
+//el metodo persona3.nombreCompleto con los datos del persona4
+console.log( persona3.nombreCompleto() );
+
+console.log( persona3.nombreCompleto.call( persona4 ) );
+
+//Uso de apply para usar 
+//el metodo persona3.nombreCompleto con los datos del persona4
+console.log( persona3.nombreCompleto() ); //se lamma nombre completo juan perez y en la segunda se llama apply
+console.log( persona3.nombreCompleto.aplly( persona4 ) );
