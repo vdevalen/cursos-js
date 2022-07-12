@@ -7,6 +7,8 @@
 // set es para modificar el valor del atributo
 
 class Persona{ //CLASE PADRE PERSONA 
+    static contadorPersonas = 0; //atributos static en la clase 
+
     constructor(nombre,apellido){ 
         this._nombre=nombre; //ATRIBUTOS 
         this._apellido=apellido;
@@ -89,4 +91,6 @@ Persona.saludar(); //manera correcta
 persona1.saludar(); //manera incorrecta porque el static no puede ser usado en sus obj solo en la clase principal que es Persona. 
 
 //-----ATRIBUTOS ESTATICOS EN JS------
-//
+
+console.log(persona1.contadorPersonas); //incorrecta porque esta en la clase y no en el obj 
+console.log(Persona.contadorPersonas); //correcta 

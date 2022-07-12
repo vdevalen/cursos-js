@@ -20,7 +20,7 @@ console.log (autos); //se valida que se agrega el elemento
 
 //agregar variable a un arreglo con el largor 
 
-console.log(autos.length); //se validan que hay 4 elemntos
+console.log(autos.length); //se validan que hay 4 elemntos //METODO LENGTH haceque se esep< cuantos arreglos hay 
 autos[autos.length]= 'cadallic'; //agregar un nuevo elementos a el final del arreglo  
 
 console.log(autos); //aca se valida que ya se agrego el cadallic en la ultima posicion 
