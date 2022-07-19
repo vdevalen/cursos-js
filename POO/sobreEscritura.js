@@ -37,6 +37,7 @@ function determinarTipo(tipo){ //determina el tipo este metodo, determina el tip
     }
 }
 
+
 let empleado1= new Empleado('Juan', 5000); // la clase padre solo toma el obtener detalle 
 let gerente1= new Gerente ('Carlos', 3000, 'sistemas'); // obtener 
 console.log(gerente1.obtenerDetalles());

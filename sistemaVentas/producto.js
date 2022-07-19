@@ -78,6 +78,7 @@ mostrarOrden(){ //metodo que va imprimir cada uno de los elementos de la orden y
 
 //crear nuevo objt tipo orden
 //-------agregaer nuevos produdctos RELACION DE AGREGACION-----
+
 let orden1 = new Orden();
 orden1.agregarProducto(producto1);
 orden1.agregarProducto(producto2);
@@ -90,4 +91,5 @@ orden2.agregarProducto(producto3);
 orden2.agregarProducto(producto2);
 orden2.agregarProducto(producto1);
 orden2.mostrarOrden();
+
 }

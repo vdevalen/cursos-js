@@ -20,6 +20,8 @@ console.log('continuamos...');
 
 
 
+//clausula throw  arroja el propio error clase 111
+
 
 
 
