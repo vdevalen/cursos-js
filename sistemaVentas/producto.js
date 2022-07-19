@@ -37,7 +37,7 @@ class Orden{
         this._idOrden= ++Orden.contadorOrdenes; //por cada obj que se cree se usa el contador para que incfremente cada que se agg un obj 
         this._productos= []; //arreglo de productos para la relacion de  muna orden puede tener muchos productos agg por medio del arreglo
         //arreglo vacio que se le va agregar productos por medio del metodo agregar productos
-        this._contadorProductosAgregados= 0;
+        // this._contadorProductosAgregados= 0;
 }
 
 get idOrden(){
@@ -66,13 +66,28 @@ calcularTotal(){
 mostrarOrden(){ //metodo que va imprimir cada uno de los elementos de la orden y sus productos, y por cada producto se van a convertir en una cadena 
     let productosOrden= ' ';
     for (let producto of this._productos){
-        productosOrden += producto.toSring() + ' '; //agg cada producto 
+        productosOrden += '\n{'+ producto.toSring() + ' }'; //agg cada producto 
     }
     console.log(`Orden: ${this._idOrden} Total: ${this.this.calcularTotal()}, Productos: ${productosOrden}`)
 }
 
-let producto1= new Producto ('pantalon', 200);
+// let producto1= new Producto ('pantalon', 200);
 // console.log(producto1.toSring());
-let producto2= new Producto('camisa', 300);
+// let producto2= new Producto('camisa', 300);
 // console.log(producto2.toSring());
+
+//crear nuevo objt tipo orden
+//-------agregaer nuevos produdctos RELACION DE AGREGACION-----
+let orden1 = new Orden();
+orden1.agregarProducto(producto1);
+orden1.agregarProducto(producto2);
+
+orden1.mostrarOrden(); //mostrar toda la orden generada y agregada anteriormente 
+
+let orden2= new Orden();
+let producto3= new Producto('Cinturon', 50);
+orden2.agregarProducto(producto3);
+orden2.agregarProducto(producto2);
+orden2.agregarProducto(producto1);
+orden2.mostrarOrden();
 }
